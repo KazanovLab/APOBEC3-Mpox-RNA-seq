@@ -1,0 +1,13 @@
+muttype	clair3rna_cnt	clair3rna_apocnt	lowfreq_cnt	lowfreq_apocnt	bcftools_cnt	bcftools_apocnt
+A>C	4	0	1	0	1923	0
+A>G	6	0	2	0	1311	0
+A>T	1	0	1	0	1554	0
+C>A	4	0	0	0	733	0
+C>G	1	0	0	0	484	0
+C>T	20	19	0	0	948	345
+G>A	33	30	0	0	970	361
+G>C	1	0	0	0	876	0
+G>T	0	0	0	0	718	0
+T>A	2	0	1	0	1764	0
+T>C	3	0	2	0	2408	0
+T>G	3	0	2	0	981	0

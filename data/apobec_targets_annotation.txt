@@ -1,0 +1,5 @@
+mutation_category	cnt
+intergenic	3608
+synonymous	5222
+nonsynonymous	15162
+nonsense	703

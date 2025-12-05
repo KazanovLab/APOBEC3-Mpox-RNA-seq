@@ -1,0 +1,13 @@
+muttype	clair3rna_cnt	clair3rna_apocnt	clair3rna_isTbefore	clair3rna_isAafter	lowfreq_cnt	lowfreq_apocnt	lowfreq_isTbefore	lowfreq_isAafter	bcftools_cnt	bcftools_apocnt	bcftools_isTbefore	bcftools_isAafter
+A>C	0	0	0	0	1	0	0	1	0	0	0	0
+A>G	4	0	4	0	10	0	4	6	4	0	4	0
+A>T	0	0	0	0	0	0	0	0	0	0	0	0
+C>A	0	0	0	0	0	0	0	0	0	0	0	0
+C>G	0	0	0	0	0	0	0	0	0	0	0	0
+C>T	0	0	0	0	6	0	0	0	6	0	0	0
+G>A	0	0	0	0	0	0	0	0	0	0	0	0
+G>C	0	0	0	0	0	0	0	0	1	0	0	1
+G>T	0	0	0	0	0	0	0	0	0	0	0	0
+T>A	0	0	0	0	0	0	0	0	0	0	0	0
+T>C	0	0	0	0	0	0	0	0	2	0	0	1
+T>G	0	0	0	0	0	0	0	0	1	0	0	0

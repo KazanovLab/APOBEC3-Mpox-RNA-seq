@@ -1,0 +1,1 @@
+pos	ref	alt	motif3	motif21	isAPOBEC	isAPOBECextended	vaf	altcnt	ref_norm	alt_norm	motif3_norm	ref_codon	var_codon	ref_aa	var_aa	aa_position	mutation_category

@@ -1,0 +1,5 @@
+pos	ref	alt	motif3	motif21	isAPOBEC	isAPOBECextended	vaf	altcnt	ref_norm	alt_norm	motif3_norm	ref_codon	var_codon	ref_aa	var_aa	aa_position	mutation_category
+141329	C	T	CCG	CCGCTGTTGCCGTTGCTGCGG	0	2	1	19	C	T	CCG	GCC	GCT	A	A	3	synonymous
+141132	A	G	GAC	CGAAGAGCAGACATCTGTGTT	0	0	0.0526316	1	A	G	GAC	ACA	GCA	T	A	1	nonsynonymous
+141138	G	A	TGT	GCAGACATCTGTGTTCTCCGC	0	2	0.0526316	1	G	A	TGT	GTG	ATG	V	M	1	nonsynonymous
+141236	A	G	TAC	TTATTTCACTACTATCTATGA	0	0	0.0526316	1	A	G	TAC	CTA	CTG	L	L	3	synonymous

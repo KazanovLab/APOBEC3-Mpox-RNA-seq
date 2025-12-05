@@ -1,0 +1,1 @@
+chrom	pos	id	ref	alt	qual	filter	info	format	sample	refcnt	altcnt	depth	vaf	motif3	motif21	isAPOBEC	isAPOBECextended	refcnt_thr	altcnt_thr	depth_thr	vaf_thr	is_filtered
