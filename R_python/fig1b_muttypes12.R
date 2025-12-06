@@ -34,16 +34,6 @@ for(s in 1:length(sample_list)){
   
   sbs <- copy(refmt12)
   
-clair3rna <- read.csv(paste0("data/",sample,"_clair3rna.txt"),sep='\t')
-clair3rna <- data.table(clair3rna)
-clair3rna[, isTbefore := as.integer(substr(motif3,1,1) == "T")]
-clair3rna[, isAafter := as.integer(substr(motif3,3,3) == "A")]
-clair3rna <- clair3rna[vaf >= 0.01]
-lowfreq <- read.csv(paste0("data/",sample,"_lofreq.txt"),sep='\t')
-lowfreq <- data.table(lowfreq)
-lowfreq[, isTbefore := as.integer(substr(motif3,1,1) == "T")]
-lowfreq[, isAafter := as.integer(substr(motif3,3,3) == "A")]
-lowfreq <- lowfreq[vaf >= 0.01]
 bcftools <- read.csv(paste0("data/",sample,"_bcftools.txt"),sep='\t')
 bcftools <- data.table(bcftools)
 bcftools[, isTbefore := as.integer(substr(motif3,1,1) == "T")]
@@ -54,35 +44,7 @@ if(project == "PRJEB60728"){
  bcftools <- bcftools[vaf >= 0.01]
 }
 
-clair3rna[,muttype := paste0(ref,">",alt)]
-lowfreq[,muttype := paste0(ref,">",alt)]
 bcftools[,muttype := paste0(ref,">",alt)]
-
-clair3rna_grp <- merge(refmt12,clair3rna[,.(cnt=sum(altcnt),apocnt=sum(isAPOBEC*altcnt),isTbefore=sum(isTbefore*altcnt),isAafter=sum(isAafter*altcnt)),by=muttype],by="muttype",all.x=T)
-clair3rna_grp[is.na(cnt),cnt:=0]
-clair3rna_grp[is.na(apocnt),apocnt:=0]
-clair3rna_grp[is.na(isTbefore),isTbefore:=0]
-clair3rna_grp[is.na(isAafter),isAafter:=0]
-setnames(clair3rna_grp,"cnt",paste0("clair3rna_cnt"))
-setnames(clair3rna_grp,"apocnt",paste0("clair3rna_apocnt"))
-setnames(clair3rna_grp,"isTbefore",paste0("clair3rna_isTbefore"))
-setnames(clair3rna_grp,"isAafter",paste0("clair3rna_isAafter"))
-clair3rna_grp[,muttype:=NULL]
-
-sbs <- cbind(sbs,clair3rna_grp)
-
-lowfreq_grp <- merge(refmt12,lowfreq[,.(cnt=sum(altcnt),apocnt=sum(isAPOBEC*altcnt),isTbefore=sum(isTbefore*altcnt),isAafter=sum(isAafter*altcnt)),by=muttype],by="muttype",all.x=T)
-lowfreq_grp[is.na(cnt),cnt:=0]
-lowfreq_grp[is.na(apocnt),apocnt:=0]
-lowfreq_grp[is.na(isTbefore),isTbefore:=0]
-lowfreq_grp[is.na(isAafter),isAafter:=0]
-setnames(lowfreq_grp,"cnt",paste0("lowfreq_cnt"))
-setnames(lowfreq_grp,"apocnt",paste0("lowfreq_apocnt"))
-setnames(lowfreq_grp,"isTbefore",paste0("lowfreq_isTbefore"))
-setnames(lowfreq_grp,"isAafter",paste0("lowfreq_isAafter"))
-lowfreq_grp[,muttype:=NULL]
-
-sbs <- cbind(sbs,lowfreq_grp)
 
 bcftools_grp <- merge(refmt12,bcftools[,.(cnt=sum(altcnt),apocnt=sum(isAPOBEC*altcnt),isTbefore=sum(isTbefore*altcnt),isAafter=sum(isAafter*altcnt)),by=muttype],by="muttype",all.x=T)
 bcftools_grp[is.na(cnt),cnt:=0]

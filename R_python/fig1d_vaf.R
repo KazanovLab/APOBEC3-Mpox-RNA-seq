@@ -26,7 +26,7 @@ for(s in 1:length(sample_list)){
   sample <- sample_list[s]
   project <- project_list[s]
   
-  for(caller in c("clair3rna","lofreq","bcftools")){
+  for(caller in c("bcftools")){
     
     dt <- read.csv(paste0("data/",sample,"_",caller,".txt"),sep='\t')
     dt <- data.table(dt)
